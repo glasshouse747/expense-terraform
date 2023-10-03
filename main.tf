@@ -14,7 +14,7 @@ module "vpc" {
 module "public-lb" {
   source = "./modules/alb"
   alb_sg_allow_cidr   = "0.0.0.0/0"
-  alb_type            = public
+  alb_type            = "public"
   env                 = var.env
   internal            = false
   subnets             = module.vpc.public_subnets
